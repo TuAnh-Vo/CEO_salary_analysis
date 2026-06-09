@@ -33,6 +33,10 @@ Most workers are paid on fixed agreements, CEO pay is not. Because executives ha
 
 KNN is lower everywhere, and both methods collapse in quality when firm size is dropped (M8) — confirming size as the backbone predictor.
 
+**Monte Carlo simulation: OLS is the most robust method across all outlier scenarios**
+
+![Monte Carlo results](ceo-salary-inference-prediction/figures/monte_carlo_results.png)
+
 **Correlation structure of the data:**
 
 ![Correlation heatmap](ceo-salary-inference-prediction/figures/correlation_heatmap.png)
