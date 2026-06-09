@@ -84,7 +84,7 @@ A cross-section of **209 firms (1990)** with CEO `salary`, firm `sales`, perform
 
 ## Authors
 
-Group project for **Data Science Practical (Year 2 - Bachelor)**, School of Business and Economics, Vrije Universiteit Amsterdam.
+Group project for **Data Science Practical (Year 2 - Bachelor)**, BSc Econometric and Data Science, School of Business and Economics, Vrije Universiteit Amsterdam.
 
 - Tu Anh Nhu Vo
 - Floris Drese
