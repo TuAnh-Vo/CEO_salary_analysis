@@ -29,13 +29,13 @@ Most workers are paid on fixed agreements, CEO pay is not. Because executives ha
 
 **Out-of-sample test MSE — OLS vs KNN across model specifications** (lower is better):
 
-![OLS vs KNN test MSE](ceo-salary-inference-prediction/figures/correlation_heatmap.png)
+![OLS vs KNN test MSE](ceo-salary-inference-prediction/figures/ols_vs_knn_test_mse.png)
 
 KNN is lower everywhere, and both methods collapse in quality when firm size is dropped (M8) — confirming size as the backbone predictor.
 
 **Correlation structure of the data:**
 
-![Correlation heatmap](figures/correlation_heatmap.png)
+![Correlation heatmap](ceo-salary-inference-prediction/figures/correlation_heatmap.png)
 
 `sales` and `lsales` are near-perfectly collinear (only one belongs in the model), and `salary`/`lsalary` correlate most strongly with firm size — visible before a single model is fit.
 
