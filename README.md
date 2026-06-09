@@ -1,6 +1,6 @@
 # CEO Salary: Inference and Prediction
 
-**What drives CEO pay — firm size, or firm performance?** A cross-sectional study of 209 firms that pairs classical econometric inference with machine-learning prediction, and uses a Monte Carlo simulation to stress-test when each method can be trusted.
+**What drives CEO pay, firm size, or firm performance?** A cross-sectional study of 209 firms that pairs classical econometric inference with machine-learning prediction, and uses a Monte Carlo simulation to stress-test when each method can be trusted.
 
 `Python` · `statsmodels` · `scikit-learn` · `OLS` · `KNN` · `Decision Trees` · `Random Forest` · `Monte Carlo simulation`
 
