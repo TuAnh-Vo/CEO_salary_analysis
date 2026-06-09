@@ -77,17 +77,6 @@ A recurring methodological highlight documented in the report is the **"block tr
 
 A cross-section of **209 firms (1990)** with CEO `salary`, firm `sales`, performance measures (`roe`, `ros`, `pcroe`), and industry dummies (`indus`, `finance`, `consprod`, `utility`), plus log versions of salary and sales. No missing values. The dataset was provided as part of the course and is a classic teaching dataset for executive-compensation analysis, results should be read in the context of its age and modest size.
 
-## Running it
-
-```bash
-git clone https://github.com/<your-username>/ceo-salary-inference-prediction.git
-cd ceo-salary-inference-prediction
-python -m venv .venv && source .venv/bin/activate    # optional
-pip install -r requirements.txt
-jupyter notebook
-```
-
-Run the notebooks in order (`01` → `02` → `03`). They read the dataset from `../data/ceo_salary_1990.csv`, so run them from the `notebooks/` directory.
 
 ## Authors
 
