@@ -9,19 +9,19 @@
 ## TL;DR — key findings
 
 - **Firm size dominates.** Across every method (OLS, KNN, decision trees, random forest), firm size (log-sales) is the single strongest determinant of CEO compensation. In the random forest it carries 61–82% of the predictive weight.
-- **Performance matters at the threshold, not the margin.** A simple dummy for *whether returns were negative* (`NegROS`) explains pay better than the continuous return-on-equity measure — consistent with pay contracts that punish losses more than they reward incremental gains.
+- **Performance matters at the threshold, not the margin.** A simple dummy for *whether returns were negative* (`NegROS`) even explains pay better than the continuous return-on-equity (`ROE`) measure, consistent with CEO compensation structure that punish losses more than they reward incremental gains.
 - **KNN beats OLS out-of-sample.** Even after adding a quadratic size term to OLS, KNN achieves lower test MSE (best: 0.241 vs 0.30) by exploiting *local, asymmetric* structure that a global linear model averages away.
-- **But OLS is more robust.** A 500-run Monte Carlo study shows that once outliers are introduced, OLS degrades far more gracefully than KNN or trees — a clean illustration of the bias–variance / robustness trade-off in small samples.
-- **Honest limits.** With only 209 observations, the random forest *underperformed* on one specification, and ~87% of salary variation stays unexplained — pointing to drivers the data can't see (tenure, reputation, private negotiation).
+- **But OLS is more robust.** A 500 replications Monte Carlo study shows that once outliers are introduced, OLS degrades more gradually than KNN or trees, which is also a clean illustration of the bias–variance trade-off in small sample size.
+- **Honest limits.** With only 209 observations, the random forest underperformed on the baseline specification, with only around 14% of salary variation are explained, pointing to the limitation of the given data (reputation, specific skills, or private negotiation).
 
 ---
 
 ## Why this project
 
-Most workers are paid on fixed agreements; CEO pay is not. Because executives have scarce skills and bargaining power, firms tie their compensation to performance to align incentives with shareholders (the classic *agency problem*). This project asks **how much of that pay is actually explained by performance versus the sheer scale of the firm** — and treats the question from two angles that are usually taught separately:
+Most workers are paid on fixed agreements, CEO pay is not. Because executives have scarce skills and bargaining power, firms tie their compensation to performance to align incentives with shareholders. This project asks **how much of that pay is actually explained by performance versus the sheer scale of the firm**, and treats the question from two angles that are usually taught separately:
 
-- **Inference** — recovering interpretable, statistically valid relationships (with full diagnostic testing).
-- **Prediction** — minimising out-of-sample error, where interpretability matters less than generalisation.
+- **Inference**: building regression models to test whether performance measures have a statistically meaningful relationship with pay, with full diagnostic testing.
+- **Prediction**: applying flexible non-parametric methods (KNN, decision trees, random forest) to see whether they outperform OLS out-of-sample, and running a simulation study to understand when each approach can be trusted.
 
 ---
 
@@ -75,7 +75,7 @@ A recurring methodological highlight documented in the report is the **"block tr
 
 ## Data
 
-A cross-section of **209 firms (1990)** with CEO `salary`, firm `sales`, performance measures (`roe`, `ros`, `pcroe`), and industry dummies (`indus`, `finance`, `consprod`, `utility`), plus log versions of salary and sales. No missing values. The dataset was provided as part of the course and is a classic teaching dataset for executive-compensation analysis; results should be read in the context of its age and modest size.
+A cross-section of **209 firms (1990)** with CEO `salary`, firm `sales`, performance measures (`roe`, `ros`, `pcroe`), and industry dummies (`indus`, `finance`, `consprod`, `utility`), plus log versions of salary and sales. No missing values. The dataset was provided as part of the course and is a classic teaching dataset for executive-compensation analysis, results should be read in the context of its age and modest size.
 
 ## Running it
 
@@ -91,7 +91,7 @@ Run the notebooks in order (`01` → `02` → `03`). They read the dataset from 
 
 ## Authors
 
-Group project for **Data Science Practical (Year 2)**, School of Business and Economics, Vrije Universiteit Amsterdam.
+Group project for **Data Science Practical (Year 2 - Bachelor)**, School of Business and Economics, Vrije Universiteit Amsterdam.
 
 - Tu Anh Nhu Vo
 - Floris Drese
